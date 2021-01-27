@@ -4,7 +4,7 @@ import { definePoly, watchPoly } from "vue-poly";
 export default function FormFormula() {
   const model = ref({ name: "init", password: "" });
   const poly = definePoly({
-    id: "form",
+    id: Symbol(),
     model,
     changeName() {
       model.value.name = "fuck";

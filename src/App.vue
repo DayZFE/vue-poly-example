@@ -1,7 +1,7 @@
 <template>
   <div>
     {{ model.name }}
-    <Name />
+    <Name :token="id" />
   </div>
 </template>
 

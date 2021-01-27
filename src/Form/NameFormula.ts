@@ -1,9 +1,9 @@
-import { bond } from "vue-poly";
+import { bond, PolyID } from "vue-poly";
 
-export default function NameFormula() {
+export default function NameFormula(props: { token: PolyID }) {
   const partial = {
-    name: bond("form", ["model", "value", "name"], ""),
-    setName: bond("form", "changeName", () => {}),
+    name: bond(props.token, ["model", "value", "name"], ""),
+    setName: bond(props.token, "changeName", () => {}),
   };
   return partial;
 }
